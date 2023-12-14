@@ -1,16 +1,7 @@
 'use client';
 
-import {
-  ButtonSet,
-  Button,
-  Grid,
-  Column,
-} from '@carbon/react';
-import {
-  Time,
-  Target,
-  Intelligence,
-} from '@carbon/pictograms-react';
+import { ButtonSet, Button, Grid, Column } from '@carbon/react';
+import { Time, Target, Intelligence } from '@carbon/pictograms-react';
 import { InfoSection, InfoCard } from '@/components/Info/Info';
 
 export default function LandingPage() {
@@ -18,19 +9,23 @@ export default function LandingPage() {
     <Grid className="landing-page" fullWidth>
       <Column lg={16} md={8} sm={4} className="landing-page__r2">
         <Grid className="tabs-group-content">
-          <Column
-            md={4}
-            lg={7}
-            sm={4}
-            className="landing-page__tab-content"
-          >
-            <h2 className="landing-page__subheading">Discover top-tier engineers for crafting your software masterpiece</h2>
+          <Column md={4} lg={7} sm={4} className="landing-page__tab-content">
+            <h2 className="landing-page__subheading">
+              Discover top-tier engineers for crafting your software masterpiece
+            </h2>
             <p className="landing-page__p">
-              Optimize your talent acquisition process with our expertise in curating and securing top-tier engineering professionals for your team. Reach out to us today and embark on the journey to assemble the ideal team tailored to your specific needs.
+              Optimize your talent acquisition process with our expertise in
+              curating and securing top-tier engineering professionals for your
+              team. Reach out to us today and embark on the journey to assemble
+              the ideal team tailored to your specific needs.
             </p>
             <ButtonSet label="Primary action">
-              <Button kind='primary' href='/hire'>Find Engineers</Button>
-              <Button kind='secondary' href='/positions'>Open Positions</Button>
+              <Button kind="primary" href="/hire">
+                Find Engineers
+              </Button>
+              <Button kind="secondary" href="/positions">
+                Open Positions
+              </Button>
             </ButtonSet>
           </Column>
         </Grid>
@@ -43,7 +38,7 @@ export default function LandingPage() {
             icon={() => <Time size={32} />}
           />
           <InfoCard
-            heading="We are Accertive"
+            heading="We are Assertive"
             body="We are dedicated to identifying the right engineers for your company. Our focus is on delivering long-term solutions that align with your organization's needs and goals."
             icon={() => <Target size={32} />}
           />

@@ -32,9 +32,9 @@ const TutorialHeader = () => (
           <HeaderName prefix="AZVD">Technology Services</HeaderName>
         </Link>
         <HeaderNavigation aria-label="Technology Services">
-          <Link href="/about" passHref legacyBehavior>
+          {/* <Link href="/about" passHref legacyBehavior>
             <HeaderMenuItem>About Us</HeaderMenuItem>
-          </Link>
+          </Link> */}
           <Link href="/hire" passHref legacyBehavior>
             <HeaderMenuItem>Find Engineers</HeaderMenuItem>
           </Link>
@@ -49,14 +49,14 @@ const TutorialHeader = () => (
         >
           <SideNavItems>
             <HeaderSideNavItems>
-              <Link href="/repos" passHref legacyBehavior>
+              <Link href="/positions" passHref legacyBehavior>
                 <HeaderMenuItem>Open Positions</HeaderMenuItem>
               </Link>
             </HeaderSideNavItems>
           </SideNavItems>
         </SideNav>
         <HeaderGlobalBar>
-          <HeaderGlobalAction
+          {/* <HeaderGlobalAction
             aria-label="Notifications"
             tooltipAlignment="center"
           >
@@ -70,7 +70,7 @@ const TutorialHeader = () => (
           </HeaderGlobalAction>
           <HeaderGlobalAction aria-label="App Switcher" tooltipAlignment="end">
             <Switcher size={20} />
-          </HeaderGlobalAction>
+          </HeaderGlobalAction> */}
         </HeaderGlobalBar>
       </Header>
     )}
