@@ -21,7 +21,7 @@ import Link from 'next/link';
 const TutorialHeader = () => (
   <HeaderContainer
     render={({ isSideNavExpanded, onClickSideNavExpand }) => (
-      <Header aria-label="Carbon Tutorial">
+      <Header aria-label="Technology Services">
         <SkipToContent />
         <HeaderMenuButton
           aria-label="Open menu"
@@ -29,11 +29,17 @@ const TutorialHeader = () => (
           isActive={isSideNavExpanded}
         />
         <Link href="/" passHref legacyBehavior>
-          <HeaderName prefix="IBM">Carbon Tutorial</HeaderName>
+          <HeaderName prefix="AZVD">Technology Services</HeaderName>
         </Link>
-        <HeaderNavigation aria-label="Carbon Tutorial">
-          <Link href="/repos" passHref legacyBehavior>
-            <HeaderMenuItem>Repositories</HeaderMenuItem>
+        <HeaderNavigation aria-label="Technology Services">
+          <Link href="/about" passHref legacyBehavior>
+            <HeaderMenuItem>About Us</HeaderMenuItem>
+          </Link>
+          <Link href="/hire" passHref legacyBehavior>
+            <HeaderMenuItem>Find Engineers</HeaderMenuItem>
+          </Link>
+          <Link href="/positions" passHref legacyBehavior>
+            <HeaderMenuItem>Open Positions</HeaderMenuItem>
           </Link>
         </HeaderNavigation>
         <SideNav
@@ -44,7 +50,7 @@ const TutorialHeader = () => (
           <SideNavItems>
             <HeaderSideNavItems>
               <Link href="/repos" passHref legacyBehavior>
-                <HeaderMenuItem>Repositories</HeaderMenuItem>
+                <HeaderMenuItem>Open Positions</HeaderMenuItem>
               </Link>
             </HeaderSideNavItems>
           </SideNavItems>
