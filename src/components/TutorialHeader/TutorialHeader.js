@@ -49,6 +49,9 @@ const TutorialHeader = () => (
         >
           <SideNavItems>
             <HeaderSideNavItems>
+              <Link href="/hire" passHref legacyBehavior>
+                <HeaderMenuItem>Find Engineers</HeaderMenuItem>
+              </Link>
               <Link href="/positions" passHref legacyBehavior>
                 <HeaderMenuItem>Open Positions</HeaderMenuItem>
               </Link>
