@@ -48,7 +48,7 @@ const RepoTable = ({ rows, headers }) => {
                             <Link
                               href={
                                 window.location.href.replace('positions', '') +
-                                'apply/?position=' +
+                                'apply?position=' +
                                 cell.value
                               }
                             >
