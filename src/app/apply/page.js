@@ -79,7 +79,7 @@ function ApplyPage() {
       setIsModalOpen(false);
     } catch (error) {
       console.error('Error creating application:', error);
-      setSubmissionError("Please fill all fields.");
+      setSubmissionError('Please fill all fields.');
       setTimeout(() => {
         setSubmissionError(null);
       }, 8000);
@@ -123,7 +123,10 @@ function ApplyPage() {
             <Tag>Language: {positionData.language}</Tag>
             <Tag>Client: {positionData.client}</Tag>
             <Tag>Location: {positionData.location}</Tag>
-            <div dangerouslySetInnerHTML={{ __html: positionData.description }} style={{ width: '100%' }} />
+            <div
+              dangerouslySetInnerHTML={{ __html: positionData.description }}
+              style={{ width: '100%' }}
+            />
             <Button
               style={{ width: '100%' }}
               onClick={() => setIsModalOpen(true)}
@@ -131,7 +134,12 @@ function ApplyPage() {
             >
               {submitting ? 'Applying...' : 'Apply'}
             </Button>
-            <Modal open={isModalOpen} onRequestClose={closeModal} onRequestSubmit={handleApply} primaryButtonText="Apply">
+            <Modal
+              open={isModalOpen}
+              onRequestClose={closeModal}
+              onRequestSubmit={handleApply}
+              primaryButtonText="Apply"
+            >
               {/* Form in the modal */}
               <div style={{ padding: '16px' }}>
                 <h2>Apply for this position</h2>
@@ -198,7 +206,13 @@ function ApplyPage() {
                 title="Success"
                 subtitle="Application submitted successfully!"
                 caption=""
-                style={{ position: 'fixed', top: '64px', left: '16px', transform: 'translate(0, 0)', transition: 'transform 0.5s ease-in-out' }}
+                style={{
+                  position: 'fixed',
+                  top: '64px',
+                  left: '16px',
+                  transform: 'translate(0, 0)',
+                  transition: 'transform 0.5s ease-in-out',
+                }}
                 onCloseButtonClick={handleNotificationClose}
               />
             )}
@@ -208,7 +222,13 @@ function ApplyPage() {
                 title="Error"
                 subtitle={submissionError}
                 caption=""
-                style={{ position: 'fixed', top: '64px', left: '16px', transform: 'translate(0, 0)', transition: 'transform 0.5s ease-in-out' }}
+                style={{
+                  position: 'fixed',
+                  top: '64px',
+                  left: '16px',
+                  transform: 'translate(0, 0)',
+                  transition: 'transform 0.5s ease-in-out',
+                }}
                 onCloseButtonClick={handleNotificationClose}
               />
             )}

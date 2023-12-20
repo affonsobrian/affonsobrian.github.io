@@ -42,18 +42,24 @@ const RepoTable = ({ rows, headers }) => {
                 <TableRow key={row.id} {...getRowProps({ row })}>
                   {row.cells.map((cell) => (
                     <>
-                      <TableCell key={cell.id}>{cell.id.endsWith('id') ? (
-                        <>
-                          <Link href={window.location.href.replace('positions', '') + "apply/?position=" + cell.value}>
-                            Apply
-                          </Link>
-                          {console.log(row)}
-                        </>
-                      ) : (
-                        <>
-                          {cell.value}
-                        </>
-                      )}</TableCell>
+                      <TableCell key={cell.id}>
+                        {cell.id.endsWith('id') ? (
+                          <>
+                            <Link
+                              href={
+                                window.location.href.replace('positions', '') +
+                                'apply/?position=' +
+                                cell.value
+                              }
+                            >
+                              Apply
+                            </Link>
+                            {console.log(row)}
+                          </>
+                        ) : (
+                          <>{cell.value}</>
+                        )}
+                      </TableCell>
                     </>
                   ))}
                 </TableRow>
