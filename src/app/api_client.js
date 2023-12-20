@@ -1,5 +1,5 @@
 export async function getPositions() {
-  const url = 'http://34.73.18.215:8000/positions/';
+  const url = 'https://backend.azvd.net/positions/';
   try {
     const response = await fetch(url);
 
@@ -15,7 +15,7 @@ export async function getPositions() {
 }
 
 export async function getPosition(positionId) {
-  let url = 'http://34.73.18.215:8000/positions/';
+  let url = 'https://backend.azvd.net/positions/';
   url += positionId;
   try {
     const response = await fetch(url);
@@ -39,7 +39,7 @@ export async function sendMessage(name, company, email, message) {
     message: message,
   };
 
-  const url = 'http://34.73.18.215:8000/contacts/';
+  const url = 'https://backend.azvd.net/contacts/';
 
   try {
     const response = await fetch(url, {
@@ -84,7 +84,7 @@ export const createApplication = async (
 
     console.log(formData);
 
-    const response = await fetch('http://34.73.18.215:8000/applications/', {
+    const response = await fetch('https://backend.azvd.net/applications/', {
       method: 'POST',
       body: formData,
     });
