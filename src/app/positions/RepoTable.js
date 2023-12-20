@@ -11,6 +11,7 @@ import {
   TableBody,
   TableCell,
 } from '@carbon/react';
+import Link from 'next/link';
 
 const RepoTable = ({ rows, headers }) => {
   const getRowDescription = (rowId) => {
@@ -40,7 +41,20 @@ const RepoTable = ({ rows, headers }) => {
               {rows.map((row) => (
                 <TableRow key={row.id} {...getRowProps({ row })}>
                   {row.cells.map((cell) => (
-                    <TableCell key={cell.id}>{cell.value}</TableCell>
+                    <>
+                      <TableCell key={cell.id}>{cell.id.endsWith('id') ? (
+                        <>
+                          <Link href={window.location.href.replace('positions', '') + "apply/?position=" + cell.value}>
+                            Apply
+                          </Link>
+                          {console.log(row)}
+                        </>
+                      ) : (
+                        <>
+                          {cell.value}
+                        </>
+                      )}</TableCell>
+                    </>
                   ))}
                 </TableRow>
               ))}

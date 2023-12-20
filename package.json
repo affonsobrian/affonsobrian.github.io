@@ -19,11 +19,13 @@
     "@carbon/pictograms-react": "^11.50.0",
     "@carbon/react": "^1.35.0",
     "@octokit/core": "4.2.0",
+    "axios": "^1.6.2",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "next": "13.4.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-webcam": "^7.2.0",
     "sass": "^1.66.1"
   },
   "devDependencies": {
