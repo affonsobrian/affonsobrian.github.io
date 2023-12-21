@@ -54,7 +54,6 @@ const RepoTable = ({ rows, headers }) => {
                             >
                               Apply
                             </Link>
-                            {console.log(row)}
                           </>
                         ) : (
                           <>{cell.value}</>

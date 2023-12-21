@@ -16,7 +16,7 @@ export async function getPositions() {
 
 export async function getPosition(positionId) {
   let url = 'https://backend.azvd.net/positions/';
-  url += positionId + "/";
+  url += positionId + '/';
   try {
     const response = await fetch(url);
 
@@ -81,8 +81,6 @@ export const createApplication = async (
     formData.append('salary_expectation', salaryExpectation);
     formData.append('resume_file', resumeFile); // Assuming resumeFile is a File object
     formData.append('position', positionId);
-
-    console.log(formData);
 
     const response = await fetch('https://backend.azvd.net/applications/', {
       method: 'POST',
