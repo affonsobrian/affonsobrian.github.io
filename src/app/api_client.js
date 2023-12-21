@@ -16,7 +16,7 @@ export async function getPositions() {
 
 export async function getPosition(positionId) {
   let url = 'https://backend.azvd.net/positions/';
-  url += positionId;
+  url += positionId + "/";
   try {
     const response = await fetch(url);
 
